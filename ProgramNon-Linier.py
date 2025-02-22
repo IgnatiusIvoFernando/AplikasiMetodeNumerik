@@ -5,7 +5,6 @@ import re
 from UI import Ui_MainWindow
 from PySide6.QtWidgets import QMainWindow, QApplication, QMessageBox, QTableWidgetItem
 
-
 class logic(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
