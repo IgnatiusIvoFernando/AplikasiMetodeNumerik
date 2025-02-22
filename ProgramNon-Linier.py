@@ -76,6 +76,7 @@ class logic(QMainWindow, Ui_MainWindow):
             else:
                 a = x
             self.isiTabelBiseksi(o,a,b,x,fx,fa,fb,m)
+            
     def hitungRegulaFalsi(self):
         a = float(self.aRegulaFalsi.text())
         b = float(self.bRegulaFalsi.text())
@@ -98,6 +99,7 @@ class logic(QMainWindow, Ui_MainWindow):
             else:
                 a = x
             self.isiTabelRegulaFalsi(o,a,b,x,fx,fa,fb,m)
+            
     def hitungSecant(self):
         x0 = float(self.x0Secant.text())
         x1 = float(self.x1Secant.text())
@@ -113,6 +115,7 @@ class logic(QMainWindow, Ui_MainWindow):
             self.isiTabelSecant(i, x0, y0, m)            
             x2 = x1 - y1 * ((x1 - x0) / (y1 - y0))
             x0, x1 = x1, x2
+            
     def hitungNewtonRaphson(self):
         x = float(self.xNewtonRaphson.text())
         e = float(self.toleransiNewtonRaphson.text())
@@ -126,6 +129,7 @@ class logic(QMainWindow, Ui_MainWindow):
                 break
             self.isiTabelNewtonRaphson(o, x, fx, fungsiDerr, m)
             x = x - (fx/fungsiDerr)
+            
     def ubahkeBiseksi(self):
         self.stackedWidget.setCurrentWidget(self.halamanBiseksi)
     def ubahkeNewtonRaphson(self):
